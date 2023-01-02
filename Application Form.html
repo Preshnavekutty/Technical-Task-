@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Application Form </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <style>
+        table {
+            border: 10px solid #4B9D0B;
+        }
+
+        th,
+        td {
+            padding: 17px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        .center {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    </style>
+</head>
+
+<body>
+
+    <!---Header Border-->
+    <div class="container-lg p-3 my-0 ; text-white text-center"></div>
+    <!---End Header Border-->
+
+
+    <!---Logo-->
+    <div class="container text-center">
+        <a class="navbar-brand" href="#"><img src="2.jpg" alt="logo" width="80" height="80"></a>
+        <p><b>KERALA CITY BANK</b></p>
+        <p><b>Customer Application Form for Loan</b></p>
+
+        <!---End Logo-->
+
+        <!---Form-->
+
+        <form action="/action_page.php" onsubmit="myFunction()">
+            <table class="center" width="800">
+                <tr>
+                    <th colspan="2">
+                        <center>
+                            <h5>Fill this Application Form Carefully</h5>
+                        </center>
+                    </th>
+                </tr>
+                <tr>
+                    <th>First Name:</th>
+                    <td><input type="text" name="First Name" size="50"></td>
+                </tr>
+                <tr>
+                    <th>Last Name:</th>
+                    <td><input type="text" name="Last Name" size="50"></td>
+                </tr>
+                <tr>
+                    <th>Date Of Birth:</th>
+                    <td><input type="text" name="Mobile" size="50"></td>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <td><input type="text" name="Mobile" size="50"></td>
+                </tr>
+                <tr>
+                    <th>E-Mail ID:</th>
+                    <td><input type="text" name="E-Mail ID" size="50"></td>
+                </tr>
+                <tr>
+                    <th>Mobile:</th>
+                    <td><input type="text" name="Mobile" size="50"></td>
+                </tr>
+
+                <tr>
+                    <th>Gender:</th>
+                    <td><input type="text" name="State" size="50"></td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td><textarea name="message" rows="5" cols="52"></textarea></td>
+                </tr>
+                <tr>
+                    <th>
+                        <form action="/action_page.php">
+                            <label for="cars">District:</label>
+                    </th>
+                    <td><select id="District" name="District">
+                            <option value="#">Kollam</option>
+                            <option value="#">Calicut</option>
+                            <option value="#">Kochi</option>
+                            <option value="#">Palakkad</option>
+                            <option value="#">Coimbatore</option>
+                        </select></td>
+        </form>
+        </tr>
+        <tr>
+            <th>
+                <form action="/action_page.php">
+                    <label for="cars">Account Type:</label>
+            </th>
+            <td><select id="account" name="account">
+                    <option value="#">Savings Account</option>
+                    <option value="#">Current Account</option>
+                </select></td>
+            </form>
+        </tr>
+        <tr>
+            <th>
+                <form>
+                    <h6>Material Types:</h6>
+            <td><input type="checkbox" id="Material1" name="Material1" value="Depit Card">
+                <label for="Material1"> Depit Card</label><br>
+                <input type="checkbox" id="Material2" name="Material2" value="Credit Card">
+                <label for="Material2"> Credit Card</label><br>
+                <input type="checkbox" id="Material3" name="Material3" value="Check Book">
+                <label for="Material3">Check Book</label>
+            </td>
+            </form>
+            </th>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <center><button class="button" type="submit"><b>Submit</b></button></center>
+                
+            </td>
+        </tr>
+
+        </table>
+
+        </form>
+
+    </div><br>
+    <!---End Form-->
+
+
+
+
+    <script>
+        function myFunction() {
+            alert("The form was submitted");
+
+        }
+        $(document).ready(function () {
+            var $form = $('form');
+            $form.submit(function () {
+                $.post($(this).attr('action'), $(this).serialize(), function (response) {
+                    // do something here on success
+                }, 'json');
+                return false;
+            });
+        });
+        
+    </script>
+</body>
+
+</html>

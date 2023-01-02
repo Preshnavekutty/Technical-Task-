@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Home </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js.js"></script>
+
+
+    <!--CSS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            background: #4B9D0B;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 12;
+            box-shadow: 5px 10px 8px #aaa9a9;
+        }
+
+        nav .menu {
+            max-width: 1250px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .menu .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .menu ul {
+            display: inline-flex;
+        }
+
+        .menu ul li {
+            list-style: none;
+            margin-left: 7px;
+        }
+
+        .menu ul li:first-child {
+            margin-left: 0px;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            background: #fff;
+            color: black;
+        }
+
+        .img {
+            background: url('home2.jpg')no-repeat;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .img::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(221, 219, 219, 0.4);
+        }
+
+        .center {
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .center .title {
+            color: #0A8EF2;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .center .sub_title {
+            color: #0A8EF2;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .center .btns {
+            margin-top: 20px;
+        }
+
+        .center .btns button {
+            height: 55px;
+            width: 170px;
+            border-radius: 5px;
+            border: none;
+            margin: 0 10px;
+            border: 2px solid #0A8EF2;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0 10px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .center .btns button:first-child {
+            color: #0A8EF2;
+            background: white;
+        }
+
+        .btns button:first-child:hover {
+            background: white;
+            color: #4B9D0B;
+        }
+
+        .center .btns button:last-child {
+            background: white;
+            color: #4B9D0B;
+        }
+    </style>
+    <!--End CSS-->
+</head>
+
+
+
+
+
+
+<body>
+    <!--Navebar-->
+    <nav>
+        <div class="menu">
+            <!--Logo-->
+            <div class="logo">
+                <a href="#">KERALA CITY BANK</a>
+            </div>
+            <!--End Logo-->
+            
+
+
+            <!--Menu-->
+            <ul>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Service_Page.html">Loan</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Branches
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kollam">Kollam</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode">Calicut</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kochi">Kochi</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Palakkad">Palakkad</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Coimbatore">Coimbatore</a>
+                    </div>
+                </li>
+            </ul>
+            <!--End Menu-->
+        </div>
+
+    </nav>
+
+
+
+
+    <!--Image-->
+    <div class="img"></div>
+    <!--End Image-->
+
+
+
+
+    <!--Content-->
+    <div class="center">
+        <div class="title">"Providing Banking Technology to the Common Man"</div>
+        <div class="sub_title">Register/Login and access Kerala City Bank Perks and Benifits</div><br><br>
+        <div class="btns">
+            <a href="Login Form New.html"><button class="button" type="submit"><b>Login</b></button></a>
+            <a href="Register Form Page.html"><button class="button" type="submit"><b>Register</b></button></a>
+        </div>
+    </div>
+    <!--End Content-->
+
+
+</body>
+
+</html>

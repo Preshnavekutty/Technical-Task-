@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Login Form Design </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js.js"></script>
+
+
+    <!--CSS-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(coffee.jpg)no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            font-family: sans-serif;
+        }
+
+        .box {
+            color: rgb(255, 255, 255);
+            top: 60%;
+            left: 70%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+
+        .user {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 22px;
+            color: rgb(255, 255, 255);
+        }
+
+        p {
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            border: none;
+            background: transparent;
+            outline: 3px solid #fff;
+            height: 40px;
+            color: #f2f1f4;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #4B9D0B;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+
+        }
+
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #fbfdfd;
+        }
+    </style>
+    <!--End CSS-->
+</head>
+
+
+
+
+
+
+<body>
+    <div class="box">
+        <img src="user.png" class="user">
+        <h1> Login Here</h1>
+
+        <form name="myform" onsubmit="return vfun()">
+
+            <p>Username:</p>
+            <input type="text" name="uname" placeholder="Enter Username">
+            <br><br>
+
+            <p>Password:</p>
+            <input type="password" name="upswd" placeholder="Enter Password">
+            <br><br>
+
+            <div id="errorBox"></div>
+            <input type="submit" name="" value="Login">
+
+            <br><br>
+            <a href="Form Content Page.html">Register for new account ?</a>
+
+        </form>
+    </div>
+
+
+
+
+
+
+    <script>
+        function vfun() {
+            var uname = document.forms["myform"]["uname"].value;
+            var upswd = document.forms["myform"]["upswd"].value;
+
+            if (uname == null || uname == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the user name";
+                return false;
+            }
+
+            if (upswd == null || upswd == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the password";
+                return false;
+            }
+
+            if (uname != '' && upswd != '') {
+                alert("Login successfully");
+            }
+
+        }
+        //form 2
+
+        function vfun1() {
+            var uname1 = document.forms["myform2"]["uname1"].value;
+            var email1 = document.forms["myform2"]["email1"].value;
+            var upswd1 = document.forms["myform2"]["upswd1"].value;
+            var upswd2 = document.forms["myform2"]["upswd2"].value;
+
+
+            if (uname1 == null || uname1 == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the user name";
+                return false;
+            }
+
+            if (email1 == null || email1 == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the email";
+                return false;
+            }
+
+            if (upswd1 == null || upswd1 == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the password";
+                return false;
+            }
+
+            if (upswd2 == null || upswd2 == "") {
+                document.getElementById("errorBox").innerHTML =
+                    "enter the password";
+                return false;
+            }
+
+            if (upswd1 != upswd2) {
+                document.getElementById("errorBox").innerHTML =
+                    "password dont match";
+                return false;
+            }
+
+
+
+            if (uname1 != '' && upswd1 != '' && upswd2 != '' && email1 != '' && upswd1 == upswd2)
+
+
+                alert("Register successfull");
+
+
+        }
+    </script>
+
+</body>
+
+</html>
